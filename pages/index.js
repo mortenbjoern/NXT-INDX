@@ -1,23 +1,22 @@
 import Head from 'next/head';
 import { getDatabase } from '../lib/notion';
 
+import Feed from '../components/feed';
+import Footer from '../components/footer';
+import Header from '../components/header';
+
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
 export default function Home({ posts }) {
   return (
-    <div className="container">
+    <div className="container mx-auto px-4 space-y-24">
       <Head>
-        <title>KlimaKarriere</title>
+        <title>Klima Karriere</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className="flex align-center justify-center w-full h-full">
-        {posts.map((post) => (
-          <li key={post.id}>
-            <p>{post.properties.Company.rich_text[0].plain_text}</p>
-          </li>
-        ))}
-      </main>
+      <Header />
+      <Feed posts={posts} />
+      <Footer />
     </div>
   );
 }
