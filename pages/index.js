@@ -11,7 +11,7 @@ export default function Home({ posts }) {
   return (
     <div className="container mx-auto px-4 space-y-24">
       <Head>
-        <title>Klima Karriere</title>
+        <title>MAKE.IMPACT</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />

@@ -31,17 +31,19 @@ const Position = (props) => (
         <p className="">{props.position_summary}</p>
       </div>
       <div className="w-1/5"></div>
-      <div className="text-xs py-2 w-1/5 flex-shrink-0">
-        <button className="px-3 py-1 text-base border border-black text-black font-medium">
-          Ansøg
-        </button>
-        <h4 className="font-bold uppercase text-gray-500 mb-2">Detaljer</h4>
-        <ol className="list-square pl-4">
-          {props.position_deadline ? (
-            <li>Ansøgningsfrist: {props.position_deadline.start}</li>
+      <div className="text-xs py-2 w-1/5 flex-shrink-0 ">
+        <h4 className="font-bold uppercase text-gray-500 mb-2">Details</h4>
+        <ol className="space-y-1">
+          {props.position_engagement ? (
+            <li className="">{props.position_engagement}</li>
           ) : null}
-          {props.company_size ? (
-            <li>Virksomhedsstørrelse: {props.company_size}</li>
+          {props.position_deadline ? (
+            <li className="">Deadline: {props.position_deadline.start}</li>
+          ) : (
+            <li className="">Deadline: None</li>
+          )}
+          {props.position_posted ? (
+            <li className="">Posted: {props.position_posted.start}</li>
           ) : null}
         </ol>
       </div>
@@ -52,7 +54,8 @@ const Position = (props) => (
 
 export default function Feed({ posts }) {
   return (
-    <main className="flex w-full">
+    <main className="flex flex-col w-full">
+      {/* <h2 className="text-2xl mb-4">Open opportunites</h2> */}
       <ol className="flex w-full flex-col gap-y-4">
         {posts.map((post) => (
           <Position

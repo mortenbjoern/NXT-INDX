@@ -2,19 +2,21 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="pt-8 flex items-center justify-between">
-      <h3 className="text-3xl font-bold text-green-900">KLIMA.WORKS</h3>
-      <nav className="flex h-10 gap-3">
+    <header className="pt-12 flex items-center justify-between">
+      <h3 className="text-4xl font-black text-green-900 uppercase">
+        Make.Impact
+      </h3>
+      <nav className="flex text-sm h-10 gap-3">
         <Link href="/om-projektet">
-          <button className="px-3 py-1 hover:shadow-sm hover:bg-gray-100 border text-sm">
-            Om projektet
+          <button className="px-3 py-1 hover:bg-gray-100 rounded-md">
+            About the platform
           </button>
         </Link>
-        <button className="px-3 py-1 hover:border-gray-300 border-opacity-0 hover:shadow-sm hover:border-opacity-100 border text-sm rounded-md">
-          Kontakt
+        <button className="px-3 py-1 hover:bg-gray-100 rounded-md">
+          Get in touch
         </button>
-        <button className="px-3 py-1 hover:animate-fader bg-green-900 text-white text-sm shadow">
-          Tilføj stilling
+        <button className="px-3 py-1 hover:animate-fader hover:bg-green-700 text-green-700 font-medium hover:text-white rounded-md hover:shadow-xl">
+          Submit a position +
         </button>
       </nav>
     </header>
