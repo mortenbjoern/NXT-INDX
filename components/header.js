@@ -3,9 +3,12 @@ import Link from 'next/link';
 export default function Header() {
   return (
     <header className="pt-12 flex items-center justify-between">
-      <h3 className="text-4xl font-black text-green-900 uppercase">
-        Make.Impact
-      </h3>
+      <div>
+        <h3 className="text-4xl font-black text-green-900 uppercase">
+          nxt indx
+        </h3>
+        <p className="text-xs mt-1">The missing 'E' is your next employee</p>
+      </div>
       <nav className="flex text-sm h-10 gap-3">
         <Link href="/om-projektet">
           <button className="px-3 py-1 hover:bg-gray-100 rounded-md">
