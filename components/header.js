@@ -7,7 +7,6 @@ export default function Header() {
         <h3 className="text-4xl font-black text-green-900 uppercase">
           nxt indx
         </h3>
-        <p className="text-xs mt-1">The missing 'E' is your next employee</p>
       </div>
       <nav className="flex text-sm h-10 gap-3">
         <Link href="/om-projektet">

@@ -4,12 +4,13 @@ import { getDatabase } from '../lib/notion';
 import Feed from '../components/feed';
 import Footer from '../components/footer';
 import Header from '../components/header';
+import Layout from '../components/layout';
 
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
 export default function Home({ posts }) {
   return (
-    <div className="container mx-auto px-4 space-y-24">
+    <Layout>
       <Head>
         <title>NXT INDX</title>
         <link rel="icon" href="/favicon.ico" />
@@ -17,7 +18,7 @@ export default function Home({ posts }) {
       <Header />
       <Feed posts={posts} />
       <Footer />
-    </div>
+    </Layout>
   );
 }
 
