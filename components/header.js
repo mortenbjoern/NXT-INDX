@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { Close } from 'react-feather';
+import { X } from 'react-feather';
+import { useWindowSize } from '../lib/useWindowSize';
 
 // Import openSubmitOverlay from Context
 
@@ -20,19 +21,17 @@ const DesktopHeader = () => {
   );
 };
 
-const MobileHeader = (menuShow) => {
+const MobileHeader = ({ menuShow, setMenuShow }) => {
   return (
     <nav className="flex text-label-16 text-dark">
       {menuShow ? (
-        <div className="flex gap-1.5">
-          <button onClick={() => setMenuShow(false)} className="text-accent">
-            Close
-          </button>
-          <Close color="dark" size={8} />
+        <div onClick={() => setMenuShow(false)} className="flex gap-1.5">
+          <button className="text-dark">Close</button>
+          <X className={'dark'} size={16} />
         </div>
       ) : (
         <>
-          <button onClick={() => setMenuShow(true)} className="text-accent">
+          <button onClick={() => setMenuShow(true)} className="text-dark">
             Menu
           </button>
         </>
@@ -42,11 +41,29 @@ const MobileHeader = (menuShow) => {
 };
 
 const MobileMenu = () => {
-  return <></>;
+  return (
+    <nav className="flex w-full justify-between mt-4">
+      <div className="flex gap-3 text-label-14">
+        <Link href="/about">
+          <button className="">About</button>
+        </Link>
+        <a href="mailto:morten@nxtindx.com" className="block text-label-14">
+          Get in touch
+        </a>
+      </div>
+      <button
+        onClick={() => openSubmitOverlay}
+        className="text-accent text-label-14"
+      >
+        Submit position +
+      </button>
+    </nav>
+  );
 };
 
 export default function Header() {
   const [menuShow, setMenuShow] = useState(false);
+  const size = useWindowSize();
 
   return (
     <header className="flex flex-col">
@@ -58,8 +75,12 @@ export default function Header() {
             </h1>
           </Link>
         </div>
-        <DesktopHeader />
-        {/* If bigger than 816 px, mdHeader; else Header */}
+        {/* Number needs to match 'md' breakpoint in tailwind theme */}
+        {size.width >= 816 ? (
+          <DesktopHeader />
+        ) : (
+          <MobileHeader menuShow={menuShow} setMenuShow={setMenuShow} />
+        )}
       </div>
       {menuShow && <MobileMenu />}
     </header>
