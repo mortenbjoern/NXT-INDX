@@ -23,11 +23,11 @@ const DesktopHeader = () => {
 
 const MobileHeader = ({ menuShow, setMenuShow }) => {
   return (
-    <nav className="flex text-label-16 text-dark">
+    <nav className="flex text-label-14 text-dark">
       {menuShow ? (
         <div onClick={() => setMenuShow(false)} className="flex gap-1.5">
           <button className="text-dark">Close</button>
-          <X className={'dark'} size={16} />
+          <X className={'dark'} size={14} />
         </div>
       ) : (
         <>

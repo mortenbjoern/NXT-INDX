@@ -6,16 +6,16 @@ import { OutboundArrow } from './outbound-arrow';
 const Position = (props) => (
   <li className="flex flex-col md:flex-row border-t pt-2">
     <div className="">
-      <div className="flex justify-between">
+      <div className="flex items-center justify-between">
         <a href={props.position_link}>
-          <p className="font-display text-label-24 md:text-label-48">
+          <p className="font-display text-label-28 md:text-label-48">
             {props.position}
           </p>
         </a>
         <OutboundArrow />
       </div>
-      <p className="text-label-12 mt-0.5">{props.company}</p>
-      <div className="flex gap-1 text-label-10 font-light mt-2 items-center">
+      <p className="text-label-16 mt-0.75">{props.company}</p>
+      <div className="flex gap-1 text-label-12 font-light mt-2.5 items-center">
         <p>{props.company_location}</p>
         <Hexagon size={3} fill={true} />
         <p>{props.position_posted.start}</p>
@@ -24,10 +24,10 @@ const Position = (props) => (
       </div>
     </div>
     <div className="flex flex-col mt-4">
-      <p className="text-label-8 uppercase text-dark-tint font-medium">
+      <p className="text-label-10 uppercase text-dark-tint font-semibold">
         summary
       </p>
-      <p className="text-body-14 mt-0.75">{props.position_summary}</p>
+      <p className="text-body-14 mt-1">{props.position_summary}</p>
     </div>
   </li>
 );

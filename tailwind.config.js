@@ -56,6 +56,7 @@ module.exports = {
       'label-16': ['16px', '16px'],
       'label-20': ['20px', '20px'],
       'label-24': ['24px', '24px'],
+      'label-28': ['28px', '28px'],
       'label-32': ['32px', '32px'],
       'label-48': ['48px', '48px'],
       'body-12': ['12px', '15px'],
