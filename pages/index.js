@@ -5,6 +5,7 @@ import Feed from '../components/feed';
 import Footer from '../components/footer';
 import Header from '../components/header';
 import Layout from '../components/layout';
+import Spacer from '../components/spacer';
 
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
@@ -15,7 +16,9 @@ export default function Home({ posts }) {
         <title>NXT INDX</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Spacer mH="5" />
       <Header />
+      <Spacer mH="15" />
       <Feed posts={posts} />
       <Footer />
     </Layout>

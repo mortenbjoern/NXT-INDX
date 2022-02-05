@@ -4,10 +4,7 @@ module.exports = {
   theme: {
     screens: {
       sm: '576px',
-      // => @media (min-width: 576px) { ... }
-
       md: '816px',
-      // => @media (min-width: 960px) { ... }
     },
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
@@ -50,6 +47,21 @@ module.exports = {
       30: '240px',
       35: '280px',
       40: '320px',
+    },
+    fontSize: {
+      '2xsLabel': ['8px', '8px'],
+      xsLabel: ['10px', '10px'],
+      smLabel: ['12px', '12px'],
+      mdLabel: ['16px', '16px'],
+      lgLabel: ['20px', '20px'],
+      xlLabel: ['24px', '24px'],
+      '2xlLabel': ['32px', '32px'],
+      '3xlLabel': ['48px', '48px'],
+      xsBody: ['12px', '15px'],
+      smBody: ['14px', '17px'],
+      mdBody: ['16px', '22.4px'],
+      lgBody: ['20px', '24px'],
+      xlBody: ['24px', '33.6px'],
     },
     container: {
       center: true,

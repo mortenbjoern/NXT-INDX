@@ -59,6 +59,7 @@ export default function Feed({ posts }) {
       <ol className="flex w-full flex-col gap-y-4">
         {posts.map((post) => (
           <Position
+            key={post.id}
             id={post.id}
             company={post.properties.Company.rich_text[0].plain_text}
             company_location={

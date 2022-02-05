@@ -2,15 +2,13 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="pt-12 flex items-center justify-between">
+    <header className="flex items-center justify-between">
       <div>
-        <h3 className="text-4xl font-black text-green-900 uppercase">
-          nxt indx
-        </h3>
+        <h1 className="font-black text-xl text-dark uppercase">nxt indx</h1>
       </div>
-      <nav className="flex text-sm h-10 gap-3">
+      <nav className="flex text-sm">
         <Link href="/om-projektet">
-          <button className="px-3 py-1 hover:bg-gray-100 rounded-md">
+          <button className="px-3 py-1 hover:bg-gray-100">
             About the platform
           </button>
         </Link>
