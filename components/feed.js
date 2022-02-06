@@ -1,35 +1,41 @@
-// id, position, post_date, deadline, link, summary, company, company_website, company_location, company_logo, sector
-
 import { Hexagon } from 'react-feather';
 import { OutboundArrow } from './outbound-arrow';
+import { formatDistance, parseISO } from 'date-fns';
+
+const today = new Date();
 
 const Position = (props) => (
-  <li className="flex flex-col md:flex-row border-t pt-2">
-    <div className="">
-      <div className="flex items-center justify-between">
-        <a href={props.position_link}>
+  <a href={props.position_link}>
+    <li className="flex flex-col md:flex-row border-t pt-2">
+      <div className="md:w-3/5 md:pr-10">
+        <div className="flex items-start justify-between">
           <p className="font-display text-label-28 md:text-label-48">
             {props.position}
           </p>
-        </a>
-        <OutboundArrow />
+          <OutboundArrow />
+        </div>
+        <p className="text-label-16 mt-0.75">{props.company}</p>
+        <div className="flex gap-1 md:gap-1.5 text-label-12 font-light mt-4 items-center">
+          <p>{props.company_location}</p>
+          <Hexagon size={3} fill={true} />
+          <p>
+            {`Posted 
+            ${formatDistance(parseISO(props.position_posted.start), today, {
+              addSuffix: true,
+            })}`}
+          </p>
+          <Hexagon size={3} fill={true} />
+          <p>{props.company_sector}</p>
+        </div>
       </div>
-      <p className="text-label-16 mt-0.75">{props.company}</p>
-      <div className="flex gap-1 text-label-12 font-light mt-2.5 items-center">
-        <p>{props.company_location}</p>
-        <Hexagon size={3} fill={true} />
-        <p>{props.position_posted.start}</p>
-        <Hexagon size={3} fill={true} />
-        <p>{props.company_sector}</p>
+      <div className="flex flex-col md:w-2/5 md:pr-1 mt-4 md:mt-0.5">
+        <p className="text-label-10 uppercase text-dark-tint font-semibold">
+          summary
+        </p>
+        <p className="text-body-14 mt-1.5">{props.position_summary}</p>
       </div>
-    </div>
-    <div className="flex flex-col mt-4">
-      <p className="text-label-10 uppercase text-dark-tint font-semibold">
-        summary
-      </p>
-      <p className="text-body-14 mt-1">{props.position_summary}</p>
-    </div>
-  </li>
+    </li>
+  </a>
 );
 
 export default function Feed({ posts }) {

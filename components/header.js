@@ -25,7 +25,10 @@ const MobileHeader = ({ menuShow, setMenuShow }) => {
   return (
     <nav className="flex text-label-14 text-dark">
       {menuShow ? (
-        <div onClick={() => setMenuShow(false)} className="flex gap-1.5">
+        <div
+          onClick={() => setMenuShow(false)}
+          className="flex items-center gap-1"
+        >
           <button className="text-dark">Close</button>
           <X className={'dark'} size={14} />
         </div>
@@ -43,9 +46,9 @@ const MobileHeader = ({ menuShow, setMenuShow }) => {
 const MobileMenu = () => {
   return (
     <nav className="flex w-full justify-between mt-4">
-      <div className="flex gap-3 text-label-14">
+      <div className="flex gap-3">
         <Link href="/about">
-          <button className="">About</button>
+          <button className="text-label-14">About</button>
         </Link>
         <a href="mailto:morten@nxtindx.com" className="block text-label-14">
           Get in touch

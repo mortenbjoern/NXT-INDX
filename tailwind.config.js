@@ -21,6 +21,7 @@ module.exports = {
       grey: '#AFB6B5',
     },
     spacing: {
+      0: '0px',
       0.25: '2px',
       0.5: '4px',
       0.75: '6px',
@@ -59,10 +60,10 @@ module.exports = {
       'label-28': ['28px', '28px'],
       'label-32': ['32px', '32px'],
       'label-48': ['48px', '48px'],
-      'body-12': ['12px', '15px'],
-      'body-14': ['14px', '17px'],
+      'body-12': ['12px', '16.8px'],
+      'body-14': ['14px', '19.6px'],
       'body-16': ['16px', '22.4px'],
-      'body-20': ['20px', '24px'],
+      'body-20': ['20px', '28px'],
       'body-24': ['24px', '33.6px'],
     },
     container: {
