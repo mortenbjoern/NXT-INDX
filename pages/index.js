@@ -5,6 +5,7 @@ import Feed from '../components/feed';
 import Footer from '../components/footer';
 import Header from '../components/header';
 import Layout from '../components/layout';
+import Spacer from '../components/spacer';
 
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
@@ -16,7 +17,9 @@ export default function Home({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
+      <Spacer height={'h-15'} />
       <Feed posts={posts} />
+      <Spacer height={'h-25'} />
       <Footer />
     </Layout>
   );

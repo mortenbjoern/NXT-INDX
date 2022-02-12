@@ -6,7 +6,7 @@ import Carbonbadge from '../lib/carbonbadge';
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col md:flex-row md:flex-wrap md:w-full md:justify-between items-start mt-25">
+    <footer className="flex flex-col md:flex-row md:flex-wrap md:w-full md:justify-between items-start">
       <div className="w-2/3 md:w-35 space-y-2 md:space-y-3">
         <p className="text-body-12 md:text-body-14">{summary}</p>
         <button

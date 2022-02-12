@@ -40,7 +40,7 @@ const Position = (props) => (
 
 export default function Feed({ posts }) {
   return (
-    <main className="flex flex-col w-full mt-15">
+    <main className="flex flex-col w-full">
       <ol className="flex w-full flex-col gap-y-5">
         {posts.map((post) => (
           <Position
