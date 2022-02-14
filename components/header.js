@@ -1,9 +1,7 @@
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { X } from 'react-feather';
 import { useWindowSize } from '../lib/useWindowSize';
-
-// Import openSubmitOverlay from Context
 
 const DesktopHeader = () => {
   return (
@@ -54,10 +52,7 @@ const MobileMenu = () => {
           Get in touch
         </a>
       </div>
-      <button
-        onClick={() => openSubmitOverlay}
-        className="text-accent text-label-14"
-      >
+      <button onClick={''} className="text-accent text-label-14">
         Submit position +
       </button>
     </nav>

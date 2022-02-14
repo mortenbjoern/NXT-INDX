@@ -1,5 +1,5 @@
 import { Hexagon } from 'react-feather';
-import { OutboundArrow } from './outbound-arrow';
+import { OutboundArrow } from './outboundArrow';
 import { formatDistance, parseISO } from 'date-fns';
 
 const today = new Date();

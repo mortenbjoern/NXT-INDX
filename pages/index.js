@@ -6,22 +6,26 @@ import Footer from '../components/footer';
 import Header from '../components/header';
 import Layout from '../components/layout';
 import Spacer from '../components/spacer';
+import SubmitOverlay from '../components/submitOverlay';
 
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
 export default function Home({ posts }) {
   return (
-    <Layout>
-      <Head>
-        <title>NXT INDX</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header />
-      <Spacer height={'h-15'} />
-      <Feed posts={posts} />
-      <Spacer height={'h-25'} />
-      <Footer />
-    </Layout>
+    <>
+      <SubmitOverlay />
+      <Layout>
+        <Head>
+          <title>NXT INDX</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <Header />
+        <Spacer height={'h-15'} />
+        <Feed posts={posts} />
+        <Spacer height={'h-25'} />
+        <Footer />
+      </Layout>
+    </>
   );
 }
 
