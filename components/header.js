@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import { X } from 'react-feather';
 import { useWindowSize } from '../lib/useWindowSize';
 
-const DesktopHeader = () => {
+const DesktopHeader = ({ toggle }) => {
   return (
     <nav className="flex gap-5 text-label-16 text-dark">
       <Link href="/about">
@@ -12,7 +12,7 @@ const DesktopHeader = () => {
       <a href="mailto:morten@nxtindx.com" className="block">
         Get in touch
       </a>
-      <button onClick={() => openSubmitOverlay} className="text-accent">
+      <button onClick={() => toggle()} className="text-accent">
         Submit position +
       </button>
     </nav>
@@ -41,7 +41,7 @@ const MobileHeader = ({ menuShow, setMenuShow }) => {
   );
 };
 
-const MobileMenu = () => {
+const MobileMenu = ({ toggle }) => {
   return (
     <nav className="flex w-full justify-between mt-4">
       <div className="flex gap-3">
@@ -52,35 +52,37 @@ const MobileMenu = () => {
           Get in touch
         </a>
       </div>
-      <button onClick={''} className="text-accent text-label-14">
+      <button onClick={() => toggle()} className="text-accent text-label-14">
         Submit position +
       </button>
     </nav>
   );
 };
 
-export default function Header() {
+export default function Header({ toggle }) {
   const [menuShow, setMenuShow] = useState(false);
   const size = useWindowSize();
 
   return (
-    <header className="flex flex-col">
-      <div className="flex items-center justify-between">
-        <div>
-          <Link href="/">
-            <h1 className="font-black text-label-20 md:text-label-24 text-dark uppercase">
-              nxt indx
-            </h1>
-          </Link>
+    <>
+      <header className="flex flex-col">
+        <div className="flex items-center justify-between">
+          <div>
+            <Link href="/">
+              <h1 className="font-black text-label-20 md:text-label-24 text-dark uppercase">
+                nxt indx
+              </h1>
+            </Link>
+          </div>
+          {/* Number needs to match 'md' breakpoint in tailwind theme */}
+          {size.width >= 816 ? (
+            <DesktopHeader toggle={toggle} />
+          ) : (
+            <MobileHeader menuShow={menuShow} setMenuShow={setMenuShow} />
+          )}
         </div>
-        {/* Number needs to match 'md' breakpoint in tailwind theme */}
-        {size.width >= 816 ? (
-          <DesktopHeader />
-        ) : (
-          <MobileHeader menuShow={menuShow} setMenuShow={setMenuShow} />
-        )}
-      </div>
-      {menuShow && <MobileMenu />}
-    </header>
+        {menuShow && <MobileMenu toggle={toggle} />}
+      </header>
+    </>
   );
 }

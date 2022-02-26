@@ -16,7 +16,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body className="bg-light py-5">
+        <body className="bg-light">
           <Main />
           <NextScript />
         </body>

@@ -3,7 +3,7 @@ import PageTitle from './pagetitle';
 import Spacer from './spacer';
 import { X } from 'react-feather';
 
-const FormSection = ({ label, placeholder, setter }) => (
+const FormSection = ({ label, placeholder, setter, value, required }) => (
   <>
     <label className="mt-4 text-label-10 font-semibold uppercase text-dark-tint">
       {label}
@@ -11,7 +11,9 @@ const FormSection = ({ label, placeholder, setter }) => (
     <input
       className="mt-2 py-1 bg-light placeholder-grey border-b text-label-16 text-dark"
       placeholder={placeholder}
+      required={require}
       onChange={(e) => setter(e.target.value)}
+      value={value}
     ></input>
   </>
 );
@@ -28,7 +30,7 @@ const SubmitButton = () => {
 
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
-export default function SubmitOverlay() {
+export default function SubmitOverlay({ toggle }) {
   // states
   const [url, setURL] = useState('');
   const [title, setTitle] = useState('');
@@ -54,38 +56,44 @@ export default function SubmitOverlay() {
   };
 
   return (
-    <section className="p-2.5 w-screen h-screen bg-light z-10">
-      <div>
-        <div className="flex justify-between items-center">
-          <PageTitle>Submit a position</PageTitle>
-          <X size={32} />
-        </div>
-
-        <Spacer height={'h-8 md:h-7'} />
-        <form onSubmit={handleSubmit} className="flex flex-col">
-          <FormSection
-            label="link"
-            placeholder="What is the link for the position?"
-            setter={setURL}
-          />
-          <FormSection
-            label="title"
-            placeholder="What is the position called?"
-            setter={setTitle}
-          />
-          <FormSection
-            label="company"
-            placeholder="What is the company or organisation called?"
-            setter={setCompany}
-          />
-          <FormSection
-            label="location"
-            placeholder="Where is the position located?"
-            setter={setLocation}
-          />
-          <SubmitButton />
-        </form>
+    <div className="container py-5 max-w-lg">
+      <div className="flex justify-between items-center">
+        <PageTitle>Submit a position</PageTitle>
+        <X size={32} onClick={toggle} />
       </div>
-    </section>
+
+      <Spacer height={'h-8 md:h-7'} />
+      <form onSubmit={handleSubmit} className="flex flex-col">
+        <FormSection
+          label="link"
+          placeholder="What is the link for the position?"
+          setter={setURL}
+          value={url}
+          required={true}
+        />
+        <FormSection
+          label="title"
+          placeholder="What is the position called?"
+          setter={setTitle}
+          value={title}
+          required={false}
+        />
+        <FormSection
+          label="company"
+          placeholder="What is the company or organisation called?"
+          setter={setCompany}
+          value={company}
+          required={false}
+        />
+        <FormSection
+          label="location"
+          placeholder="Where is the position located?"
+          setter={setLocation}
+          value={location}
+          required={false}
+        />
+        <SubmitButton />
+      </form>
+    </div>
   );
 }

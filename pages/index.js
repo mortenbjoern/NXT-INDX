@@ -6,20 +6,18 @@ import Footer from '../components/footer';
 import Header from '../components/header';
 import Layout from '../components/layout';
 import Spacer from '../components/spacer';
-import SubmitOverlay from '../components/submitOverlay';
 
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
-export default function Home({ posts }) {
+export default function Home({ posts, toggle, visible }) {
   return (
     <>
-      <SubmitOverlay />
-      <Layout>
+      <Layout visible={visible}>
         <Head>
           <title>NXT INDX</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Header />
+        <Header toggle={toggle} />
         <Spacer height={'h-15'} />
         <Feed posts={posts} />
         <Spacer height={'h-25'} />
@@ -39,6 +37,6 @@ export const getStaticProps = async () => {
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
     // - At most once every second
-    revalidate: 300, // In seconds
+    revalidate: 60, // In seconds
   };
 };
