@@ -9,7 +9,7 @@ const FormSection = ({ label, placeholder, setter, value, required }) => (
       {label}
     </label>
     <input
-      className="mt-2 py-1 bg-light placeholder-grey border-b text-label-16 text-dark focus:outline-none focus:border-accent transition-colors duration-200"
+      className="mt-2 py-1 bg-light placeholder-grey border-b text-label-16 text-dark focus:outline-none focus:border-accent transition-colors duration-200 rounded-none"
       placeholder={placeholder}
       required={required}
       onChange={(e) => setter(e.target.value)}

@@ -3,7 +3,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html lang="en" className="bg-light">
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
@@ -40,6 +40,36 @@ class MyDocument extends Document {
           />
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#ffffff" />
+          <meta
+            name="title"
+            content="NXT INDX: Impact Jobs Feed for the Next Generation"
+          />
+          <meta
+            name="description"
+            content="A curated job platform for meaningful work, that put people in a position to have positive impact on communities, society and the planet."
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://www.nxtindx.com/" />
+          <meta
+            property="og:title"
+            content="NXT INDX: Impact Jobs Feed for the Next Generation"
+          />
+          <meta
+            property="og:description"
+            content="A curated job platform for meaningful work, that put people in a position to have positive impact on communities, society and the planet."
+          />
+          <meta property="og:image" content="/public/social.png" />
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:url" content="https://www.nxtindx.com/" />
+          <meta
+            property="twitter:title"
+            content="NXT INDX: Impact Jobs Feed for the Next Generation"
+          />
+          <meta
+            property="twitter:description"
+            content="A curated job platform for meaningful work, that put people in a position to have positive impact on communities, society and the planet."
+          />
+          <meta property="twitter:image" content="/public/social.png"></meta>
         </Head>
         <body className="bg-light">
           <Main />
