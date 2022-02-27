@@ -2,15 +2,13 @@ import { summary } from '../lib/summary';
 import Link from 'next/link';
 import Carbonbadge from '../lib/carbonbadge';
 
-// Import openSubmitOverlay from Context
-
-export default function Footer() {
+export default function Footer({ toggle }) {
   return (
     <footer className="flex flex-col md:flex-row md:flex-wrap md:w-full md:justify-between items-start">
       <div className="w-2/3 md:w-35 space-y-2 md:space-y-3">
         <p className="text-body-12 md:text-body-14">{summary}</p>
         <button
-          onClick={() => openSubmitOverlay}
+          onClick={() => toggle()}
           className="text-label-12 md:text-label-14 border p-1.25 md:p-1.5"
         >
           Submit position +

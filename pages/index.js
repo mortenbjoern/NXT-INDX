@@ -21,7 +21,7 @@ export default function Home({ posts, toggle, visible }) {
         <Spacer height={'h-15'} />
         <Feed posts={posts} />
         <Spacer height={'h-25'} />
-        <Footer />
+        <Footer toggle={toggle} />
       </Layout>
     </>
   );
