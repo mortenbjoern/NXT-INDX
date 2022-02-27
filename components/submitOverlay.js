@@ -9,21 +9,24 @@ const FormSection = ({ label, placeholder, setter, value, required }) => (
       {label}
     </label>
     <input
-      className="mt-2 py-1 bg-light placeholder-grey border-b text-label-16 text-dark"
+      className="mt-2 py-1 bg-light placeholder-grey border-b text-label-16 text-dark focus:outline-none focus:border-accent transition-colors duration-200"
       placeholder={placeholder}
-      required={require}
+      required={required}
       onChange={(e) => setter(e.target.value)}
       value={value}
     ></input>
   </>
 );
 
-const SubmitButton = () => {
+const SubmitButton = ({ success }) => {
   return (
     <input
       type="submit"
-      value="Submit"
-      className="mt-7 w-1/2 bg-accent text-light py-1.5 text-label-16"
+      value={success ? 'Submitted ✓' : 'Submit'}
+      className={`mt-7 w-1/2 ${
+        success ? 'bg-dark-tint' : 'bg-accent'
+      } text-light py-1.5 text-label-16`}
+      disabled={success}
     />
   );
 };
@@ -36,6 +39,7 @@ export default function SubmitOverlay({ toggle }) {
   const [title, setTitle] = useState('');
   const [company, setCompany] = useState('');
   const [location, setLocation] = useState('');
+  const [success, setSuccess] = useState(false);
 
   // Form submit handler
   const handleSubmit = async (e) => {
@@ -50,6 +54,7 @@ export default function SubmitOverlay({ toggle }) {
       setTitle('');
       setCompany('');
       setLocation('');
+      setSuccess(true);
     } else {
       console.log(res);
     }
@@ -92,7 +97,7 @@ export default function SubmitOverlay({ toggle }) {
           value={location}
           required={false}
         />
-        <SubmitButton />
+        <SubmitButton success={success} />
       </form>
     </div>
   );

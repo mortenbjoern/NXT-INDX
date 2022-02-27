@@ -9,7 +9,7 @@ const Position = (props) => (
     <li className="flex flex-col md:flex-row border-t pt-2">
       <div className="md:w-3/5 md:pr-10">
         <div className="flex items-start justify-between">
-          <p className="font-display text-label-28 md:text-label-48">
+          <p className="font-display text-label-28 md:text-label-40">
             {props.position}
           </p>
           <OutboundArrow />
@@ -17,14 +17,14 @@ const Position = (props) => (
         <p className="text-label-16 mt-0.75">{props.company}</p>
         <div className="flex gap-1 md:gap-1.5 text-label-12 font-light mt-4 items-center">
           <p>{props.company_location}</p>
-          <Hexagon size={3} fill={true} />
+          <Hexagon size={3} fill="true" />
           <p>
             {`Posted 
             ${formatDistance(parseISO(props.position_posted.start), today, {
               addSuffix: true,
             })}`}
           </p>
-          <Hexagon size={3} fill={true} />
+          <Hexagon size={3} fill="true" />
           <p>{props.company_sector}</p>
         </div>
       </div>

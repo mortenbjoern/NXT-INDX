@@ -49,6 +49,11 @@ module.exports = {
       35: '280px',
       40: '320px',
     },
+    borderWidth: {
+      DEFAULT: '1px',
+      0: '0',
+      2: '2px',
+    },
     fontSize: {
       'label-8': ['8px', '8px'],
       'label-10': ['10px', '10px'],
@@ -72,4 +77,9 @@ module.exports = {
     },
   },
   plugins: [],
+  variants: {
+    extend: {
+      borderWidth: ['hover', 'focus'],
+    },
+  },
 };
