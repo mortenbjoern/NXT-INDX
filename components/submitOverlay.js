@@ -61,7 +61,7 @@ export default function SubmitOverlay({ toggle }) {
   };
 
   return (
-    <div className="container py-5 max-w-lg">
+    <div className="container py-2.5 max-w-lg">
       <div className="flex justify-between items-center">
         <PageTitle>Submit a position</PageTitle>
         <X size={32} onClick={toggle} />

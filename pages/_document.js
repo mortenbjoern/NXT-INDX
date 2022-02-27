@@ -3,7 +3,10 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en" className="bg-light">
+      <Html
+        lang="en"
+        className="bg-light [-webkit-tap-highlight-color:transparent]"
+      >
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
