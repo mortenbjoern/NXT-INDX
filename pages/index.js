@@ -10,7 +10,7 @@ import Spacer from '../components/spacer';
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
 export default function Home({ posts, toggle, visible }) {
-  console.log(posts);
+  console.log(util.inspect(posts, false, null, true));
   return (
     <>
       <Layout visible={visible}>
