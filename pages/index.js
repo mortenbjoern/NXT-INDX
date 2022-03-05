@@ -6,10 +6,12 @@ import Footer from '../components/footer';
 import Header from '../components/header';
 import Layout from '../components/layout';
 import Spacer from '../components/spacer';
+import { makeConsoleLogger } from '@notionhq/client/build/src/logging';
 
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
 export default function Home({ posts, toggle, visible }) {
+  console.log(posts);
   return (
     <>
       <Layout visible={visible}>
