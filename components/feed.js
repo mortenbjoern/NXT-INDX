@@ -39,7 +39,7 @@ const Position = (props) => (
               )}
             </Pill>
           )}
-          {props.Company_Sector.multi_select.length > 0 ? (
+          {props?.Company_Sector?.multi_select?.length > 0 ? (
             <Pill>
               <Truck size={12} />
               {props.Company_Sector.multi_select
