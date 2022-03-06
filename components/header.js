@@ -69,7 +69,7 @@ export default function Header({ toggle }) {
         <div className="flex items-center justify-between">
           <div>
             <Link href="/">
-              <h1 className="font-black text-label-20 md:text-label-24 text-dark uppercase">
+              <h1 className="font-black text-label-20 md:text-label-20 text-dark uppercase">
                 nxt indx
               </h1>
             </Link>

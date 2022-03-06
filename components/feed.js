@@ -8,8 +8,8 @@ const Pill = ({ children }) => <div className="flex gap-0.75">{children}</div>;
 
 const Position = (props) => (
   <a href={props.Position_Link?.url}>
-    <div className="flex flex-col md:flex-row border-t pt-2">
-      <div className="md:w-3/5 md:pr-10">
+    <div className="flex flex-col md:flex-row border-t border-dark hover:border-accent transition-colors duration-300 pt-2">
+      <div className="md:w-3/5 md:pr-10 text-dark">
         <div className="flex items-start justify-between">
           <p className="font-display text-label-28 md:text-label-40">
             {props.Position.title[0]?.plain_text}
@@ -59,7 +59,7 @@ const Position = (props) => (
         <p className="text-label-10 uppercase text-dark-tint font-semibold">
           summary
         </p>
-        <p className="text-body-14 mt-1.5">
+        <p className="text-body-14 mt-1.5 text-dark">
           {props.Position_Summary.rich_text[0]?.plain_text}
         </p>
       </div>
@@ -70,11 +70,11 @@ const Position = (props) => (
 export default function Feed({ posts }) {
   return (
     <main className="flex flex-col w-full">
-      <ol className="flex w-full flex-col gap-y-5">
+      <div className="flex w-full flex-col gap-y-5">
         {posts.map((post) => (
           <Position key={post.id} {...post.properties} />
         ))}
-      </ol>
+      </div>
     </main>
   );
 }

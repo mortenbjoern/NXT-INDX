@@ -28,4 +28,10 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+/.vscode/
 SECRET.md
+
+# specific components
+/components/alt-feed.js
+/components/alt-feed-2.js
+/components/alt-feed-3.js

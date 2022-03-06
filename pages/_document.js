@@ -73,6 +73,11 @@ class MyDocument extends Document {
         <body className="bg-light">
           <Main />
           <NextScript />
+          <script
+            async
+            defer
+            src="https://scripts.withcabin.com/hello.js"
+          ></script>
         </body>
       </Html>
     );
