@@ -15,19 +15,19 @@ class MyDocument extends Document {
             crossOrigin="true"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700;900&display=optimal"
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700;900&display=swap"
             rel="stylesheet"
           />
           <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="/public/apple-touch-icon.png"
+            href="/apple-touch-icon.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/public/favicon-32x32.png"
+            href="/favicon-32x32.png"
           />
           <link
             rel="icon"
@@ -35,12 +35,8 @@ class MyDocument extends Document {
             sizes="16x16"
             href="/favicon-16x16.png"
           />
-          <link rel="manifest" href="/public/site.webmanifest" />
-          <link
-            rel="mask-icon"
-            href="/public/safari-pinned-tab.svg"
-            color="#5bbad5"
-          />
+          <link rel="manifest" href="/site.webmanifest" />
+          <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#ffffff" />
           <meta
@@ -61,7 +57,7 @@ class MyDocument extends Document {
             property="og:description"
             content="A curated job platform for meaningful work, that put people in a position to have positive impact on communities, society and the planet."
           />
-          <meta property="og:image" content="/public/social.png" />
+          <meta property="og:image" content="/social.png" />
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:url" content="https://www.nxtindx.com/" />
           <meta
@@ -72,7 +68,7 @@ class MyDocument extends Document {
             property="twitter:description"
             content="A curated job platform for meaningful work, that put people in a position to have positive impact on communities, society and the planet."
           />
-          <meta property="twitter:image" content="/public/social.png"></meta>
+          <meta property="twitter:image" content="/social.png"></meta>
         </Head>
         <body className="bg-light">
           <Main />

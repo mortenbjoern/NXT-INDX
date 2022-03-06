@@ -10,7 +10,6 @@ import Spacer from '../components/spacer';
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
 export default function Home({ posts, toggle, visible }) {
-  console.dir(posts);
   return (
     <>
       <Layout visible={visible}>
@@ -38,6 +37,6 @@ export const getStaticProps = async () => {
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
     // - At most once every second
-    revalidate: 1, // In seconds
+    revalidate: 20, // In seconds
   };
 };

@@ -1,4 +1,4 @@
-import { Calendar, MapPin, Target, Truck } from 'react-feather';
+import { Box, Calendar, MapPin, Target } from 'react-feather';
 import { OutboundArrow } from './outboundArrow';
 import { formatDistance, parseISO } from 'date-fns';
 
@@ -8,7 +8,7 @@ const Pill = ({ children }) => <div className="flex gap-0.75">{children}</div>;
 
 const Position = (props) => (
   <a href={props.Position_Link?.url}>
-    <li className="flex flex-col md:flex-row border-t pt-2">
+    <div className="flex flex-col md:flex-row border-t pt-2">
       <div className="md:w-3/5 md:pr-10">
         <div className="flex items-start justify-between">
           <p className="font-display text-label-28 md:text-label-40">
@@ -41,7 +41,7 @@ const Position = (props) => (
           )}
           {props?.Company_Sector?.multi_select?.length > 0 ? (
             <Pill>
-              <Truck size={12} />
+              <Box size={12} />
               {props.Company_Sector.multi_select
                 .map((sector) => sector?.name)
                 .join(', ')}
@@ -63,7 +63,7 @@ const Position = (props) => (
           {props.Position_Summary.rich_text[0]?.plain_text}
         </p>
       </div>
-    </li>
+    </div>
   </a>
 );
 
