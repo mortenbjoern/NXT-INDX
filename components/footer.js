@@ -1,6 +1,5 @@
 import { summary } from '../lib/summary';
 import Link from 'next/link';
-import Carbonbadge from '../lib/carbonbadge';
 import Carbon from './carbon';
 
 export default function Footer({ toggle }) {
