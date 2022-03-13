@@ -1,6 +1,7 @@
 import { summary } from '../lib/summary';
 import Link from 'next/link';
 import Carbonbadge from '../lib/carbonbadge';
+import Carbon from './carbon';
 
 export default function Footer({ toggle }) {
   return (
@@ -38,7 +39,7 @@ export default function Footer({ toggle }) {
         </p>
       </div>
       <div className="mt-0.75 text-label-12 space-x-1 flex flex-row justify-start">
-        <Carbonbadge />
+        <Carbon />
       </div>
     </footer>
   );
