@@ -2,10 +2,10 @@ import Footer from '../../components/footer';
 import Header from '../../components/header';
 import Layout from '../../components/layout';
 import Spacer from '../../components/spacer';
-import PageTitle from '../../components/pageTitle';
 import Headline from '../../components/headline';
 import Paragraph from '../../components/paragraph';
 import Head from 'next/head';
+import PageTitle from '../../components/PageTitle';
 
 export default function DataPolicy({ toggle, visible }) {
   return (

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import PageTitle from './pageTitle';
+import PageTitle from './PageTitle';
 import Spacer from './spacer';
 import { X } from 'react-feather';
 
