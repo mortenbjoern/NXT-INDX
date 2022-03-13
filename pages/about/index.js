@@ -56,7 +56,8 @@ export default function About({ toggle, visible }) {
               </a>{' '}
               is open for anyone to follow. Feature requests, bug reports and
               feedback is greatly appreciated - for now, slide those messages in
-              to our DM’s via good old fashioned email.
+              to our DM’s via good old fashioned{' '}
+              <a href="mailto:morten@nxtindx.com">email</a>.
             </Paragraph>
           </div>
           <div className="w-full md:w-2/5 h-25 flex justify-end items-center">
