@@ -13,14 +13,19 @@ export default function Carbon() {
 
   if (error)
     return (
-      <p className="text-accent p-1 bg-solar">
+      <p className="text-accent text-label-10 font-semibold py-1 px-2 bg-solar">
         Could not fetch CO<sub>2</sub>
       </p>
     );
-  if (!data) return <p className="text-dark p-1 bg-solar">Loading...</p>;
+  if (!data)
+    return (
+      <p className="text-dark text-label-10 font-semibold py-1 px-2 bg-solar">
+        Loading...
+      </p>
+    );
 
   return (
-    <p className="text-dark p-1 bg-solar">
+    <p className="text-dark text-label-10 font-semibold py-1.25 px-1.5 bg-solar">
       {data.c}g of CO<sub>2</sub>/view
     </p>
   );

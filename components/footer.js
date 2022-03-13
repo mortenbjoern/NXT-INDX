@@ -36,8 +36,14 @@ export default function Footer({ toggle }) {
             sustainable interaction design principles
           </a>
         </p>
+        <p className="">
+          Carbon footprint analysis provided by{' '}
+          <a className="underline" href="Website Carbon">
+            Website Carbon
+          </a>
+        </p>
       </div>
-      <div className="mt-0.75 text-label-12 space-x-1 flex flex-row justify-start">
+      <div className="mt-2 text-label-12 space-x-1 flex flex-row justify-start">
         <Carbon />
       </div>
     </footer>
