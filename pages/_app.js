@@ -1,4 +1,4 @@
-import 'tailwindcss/tailwind.css';
+import '../styles/globals.css';
 import OverlayContainer from '../components/overlayContainer';
 import useOverlay from '../components/useOverlay';
 
