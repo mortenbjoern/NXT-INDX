@@ -5,7 +5,7 @@ import Spacer from '../../components/spacer';
 import Headline from '../../components/headline';
 import Paragraph from '../../components/paragraph';
 import Head from 'next/head';
-import PageTitle from '../../components/PageTitle';
+import PageTitle from '../../components/pageTitle';
 
 export default function DataPolicy({ toggle, visible }) {
   return (

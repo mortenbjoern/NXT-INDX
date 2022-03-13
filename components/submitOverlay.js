@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Spacer from './spacer';
-import PageTitle from './PageTitle';
+import pageTitle from './pageTitle';
 import { X } from 'react-feather';
 
 const FormSection = ({ label, placeholder, setter, value, required }) => (
