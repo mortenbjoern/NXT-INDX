@@ -9,7 +9,7 @@ export default function Footer({ toggle }) {
         <p className="text-body-12 md:text-body-14">{summary}</p>
         <button
           onClick={() => toggle()}
-          className="text-label-12 md:text-label-14 border p-1.25 md:p-1.5"
+          className="text-label-12 md:text-label-14 border p-1.25 md:p-1.5 rounded"
         >
           Submit position +
         </button>

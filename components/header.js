@@ -67,7 +67,7 @@ export default function Header({ toggle }) {
     <>
       <header className="flex flex-col">
         <div className="flex items-center justify-between">
-          <div>
+          <div className="cursor-pointer">
             <Link href="/">
               <h1 className="font-black text-label-20 md:text-label-20 text-dark uppercase">
                 nxt indx

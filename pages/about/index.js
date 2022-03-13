@@ -5,11 +5,15 @@ import Spacer from '../../components/spacer';
 import Headline from '../../components/headline';
 import Paragraph from '../../components/paragraph';
 import { Star, Scale, Circular } from '../../components/illustrations';
+import Head from 'next/head';
 
 export default function About({ toggle, visible }) {
   return (
     <>
       <Layout visible={visible}>
+        <Head>
+          <title>About — NXT INDX</title>
+        </Head>
         <Header toggle={toggle} />
         <Spacer height={'h-15'} />
         <section className="flex w-full flex-col-reverse md:flex-row justify-center items-center h-auto">
