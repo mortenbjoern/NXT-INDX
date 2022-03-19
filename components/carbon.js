@@ -5,7 +5,7 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export default function Carbon() {
   const router = useRouter();
-  const path = encodeURIComponent(`nxtindx.com${router.asPath}`);
+  const path = encodeURIComponent(`https://www.nxtindx.com${router.asPath}`);
   const { data, error } = useSWR(
     `https://api.websitecarbon.com/b?url=${path}`,
     fetcher

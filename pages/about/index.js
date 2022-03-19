@@ -16,7 +16,7 @@ export default function About({ toggle, visible }) {
         </Head>
         <Header toggle={toggle} />
         <Spacer height={'h-15'} />
-        <section className="flex w-full flex-col-reverse md:flex-row justify-center items-center h-auto">
+        <section className="flex w-full flex-col-reverse md:flex-row md:justify-center items-start md:items-center h-auto">
           <div className="w-full md:w-3/5">
             <Headline>
               Open impact positions in Denmark,<br></br> curated and updated
@@ -32,12 +32,12 @@ export default function About({ toggle, visible }) {
               impact for millions. And anything in between.
             </Paragraph>
           </div>
-          <div className="w-full md:w-2/5 h-25 flex justify-end items-center">
+          <div className="w-1/3 md:w-2/5 h-25 flex justify-start md:justify-end items-center">
             <Star height="176" width="169" />
           </div>
         </section>
         <Spacer height={'h-12.5'} />
-        <section className="flex w-full flex-col-reverse md:flex-row justify-center items-center h-auto">
+        <section className="flex w-full flex-col-reverse md:flex-row md:justify-center items-start md:items-center h-auto">
           <div className="w-full md:w-3/5">
             <Headline>
               Built in the open,<br></br> still under construction
@@ -57,15 +57,18 @@ export default function About({ toggle, visible }) {
               is open for anyone to follow. Feature requests, bug reports and
               feedback is greatly appreciated - for now, slide those messages in
               to our DM’s via good old fashioned{' '}
-              <a href="mailto:morten@nxtindx.com">email</a>.
+              <a className="underline" href="mailto:morten@nxtindx.com">
+                email
+              </a>
+              .
             </Paragraph>
           </div>
-          <div className="w-full md:w-2/5 h-25 flex justify-end items-center">
+          <div className="w-1/3 md:w-2/5 h-25 flex justify-start md:justify-end items-center">
             <Scale height="164" width="164" />
           </div>
         </section>
         <Spacer height={'h-12.5'} />
-        <section className="flex w-full flex-col-reverse md:flex-row justify-center items-center h-auto">
+        <section className="flex w-full flex-col-reverse md:flex-row md:justify-center items-start md:items-center h-auto">
           <div className="w-full md:w-3/5">
             <Headline>
               Action speaks louder than words,<br></br> so we decided to do
@@ -81,7 +84,7 @@ export default function About({ toggle, visible }) {
               principles and inclusive design decisions.
             </Paragraph>
           </div>
-          <div className="w-full md:w-2/5 h-25 flex justify-end items-center">
+          <div className="w-1/3 md:w-2/5 h-25 flex justify-start md:justify-end items-center">
             <Circular height="164" width="164" />
           </div>
         </section>
