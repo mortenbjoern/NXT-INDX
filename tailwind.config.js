@@ -6,12 +6,14 @@ module.exports = {
     screens: {
       sm: '576px',
       md: '816px',
+      // lg: '1079px',
     },
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
       display: ['Bebas Neue', 'Helvetica Neue', 'sans-serif'],
     },
     colors: {
+      white: '#F5F0F0',
       light: '#FBF5E9',
       solar: '#FBE2B6',
       'solar-shade': '#FAD89E',

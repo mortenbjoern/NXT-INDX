@@ -2,7 +2,7 @@ import { getDatabase } from '../lib/notion';
 
 import Feed from '../components/feed';
 // import AlternateFeed from '../components/alt-feed';
-// import AlternateFeed2 from '../components/alt-fe ed-2';
+// import AlternateFeed2 from '../components/alt-feed-2';
 // import AlternateFeed3 from '../components/alt-feed-3';
 import Footer from '../components/footer';
 import Header from '../components/header';
