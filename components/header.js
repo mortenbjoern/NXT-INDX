@@ -8,17 +8,19 @@ const DesktopHeader = () => {
   return (
     <nav className="flex gap-2 text-label-14 text-dark">
       <Link className="block" href="/about">
-        <button className="border block p-1 hover:bg-solar-tint">About</button>
+        <button className="block p-1 hover:bg-solar-tint transition-colors duration-150">
+          About
+        </button>
       </Link>
       <a
         href="mailto:morten@nxtindx.com"
-        className="block border hover:bg-solar-tint p-1"
+        className="block hover:bg-solar-tint p-1 transition-colors duration-150"
       >
         Get in touch
       </a>
       <Link
         href="/submit"
-        className="text-accent border-accent hover:bg-accent hover:text-light hover:border-accent border p-1"
+        className="text-accent hover:bg-accent hover:text-light p-1 transition-colors duration-150"
       >
         Submit position +
       </Link>
