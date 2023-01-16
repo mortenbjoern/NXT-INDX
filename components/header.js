@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { X } from 'react-feather';
 import { useWindowSize } from '../lib/useWindowSize';
 
-const DesktopHeader = ({ toggle }) => {
+const DesktopHeader = () => {
   return (
     <nav className="flex gap-2 text-label-14 text-dark">
       <Link className="block" href="/about">
@@ -16,12 +16,12 @@ const DesktopHeader = ({ toggle }) => {
       >
         Get in touch
       </a>
-      <button
-        onClick={() => toggle()}
+      <Link
+        href="/submit"
         className="text-accent border-accent hover:bg-accent hover:text-light hover:border-accent border p-1"
       >
         Submit position +
-      </button>
+      </Link>
     </nav>
   );
 };
@@ -63,12 +63,12 @@ const MobileMenu = ({ toggle }) => {
           Get in touch
         </a>
       </div>
-      <button
-        onClick={() => toggle()}
+      <Link
+        href={'/submit'}
         className="text-accent border-accent border p-1 text-label-14"
       >
         Submit position +
-      </button>
+      </Link>
     </nav>
   );
 };

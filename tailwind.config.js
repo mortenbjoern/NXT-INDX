@@ -67,6 +67,7 @@ module.exports = {
       4: '3px',
     },
     fontSize: {
+      'label-zero': ['10px', '0px'],
       'label-8': ['8px', '8px'],
       'label-10': ['10px', '10px'],
       'label-12': ['12px', '12px'],
