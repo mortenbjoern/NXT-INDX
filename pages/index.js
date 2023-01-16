@@ -1,19 +1,12 @@
 import { getDatabase } from '../lib/notion';
 
-import Feed from '../components/feed';
-import AlternateFeed from '../components/alt-feed';
 import AlternateFeed2 from '../components/alt-feed-2';
-import AlternateFeed3 from '../components/alt-feed-3';
-import AlternateFeed4 from '../components/alt-feed-4';
 import Footer from '../components/footer';
 import Header from '../components/header';
 import Layout from '../components/layout';
 import Spacer from '../components/spacer';
 import { Splash } from '../components/splash';
 import Head from 'next/head';
-import Headline from '../components/headline';
-import PageTitle from '../components/pageTitle';
-import { summary, excerpt } from '../lib/copy';
 
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
