@@ -1,30 +1,26 @@
-import { summary } from '../lib/summary';
+import { summary } from '../lib/copy';
 import Link from 'next/link';
 import Carbon from './carbon';
+import { LogoOnly } from './logo';
 
 export default function Footer({ toggle }) {
   return (
     <footer className="flex flex-col md:flex-row md:flex-wrap md:w-full md:justify-between items-start">
-      <div className="w-2/3 md:w-35 space-y-2 md:space-y-3">
-        <p className="text-body-12 md:text-body-14">{summary}</p>
-        <button
-          onClick={() => toggle()}
-          className="text-label-12 md:text-label-14 border p-1.25 md:p-1.5 rounded"
-        >
-          Submit position +
-        </button>
+      <div className="w-2/3 md:w-50 space-y-2 md:space-y-3">
+        <LogoOnly />
+        <p className="text-body-14 md:text-body-16">{summary}</p>
       </div>
-      <nav className="mt-5 md:mt-0 space-y-2 flex flex-col text-label-12">
+      <nav className="mt-5 md:mt-0 space-y-3 flex font-display flex-col text-label-24">
         <Link href="/">Home</Link>
         <Link href="/about">About</Link>
         <a href="mailto:morten@nxtindx.com">Get in touch</a>
         <Link href="/data-policy">Data policy</Link>
       </nav>
-      <div className="mt-5 md:mt-7 space-y-0.5 text-body-12 md:w-full">
+      <div className="mt-5 md:mt-7 text-dark-tint space-y-0.5 text-body-12 md:w-full">
         <p className="">
           Project by{' '}
           <a className="underline" href="https://twitter.com/mortenbjoern">
-            Morten Bjørn
+            Morten Bjørn Hallkvist.
           </a>
         </p>
         <p className="">
@@ -33,13 +29,13 @@ export default function Footer({ toggle }) {
             className="underline"
             href="https://branch.climateaction.tech/issues/issue-1/designing-branch-sustainable-interaction-design-principles/"
           >
-            sustainable interaction design principles
+            sustainable interaction design principles.
           </a>
         </p>
         <p className="">
           Carbon footprint analysis provided by{' '}
           <a className="underline" href="Website Carbon">
-            Website Carbon
+            Website Carbon.
           </a>
         </p>
       </div>

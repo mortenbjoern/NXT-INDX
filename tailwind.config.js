@@ -1,17 +1,20 @@
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
+/** @type {import('tailwindcss').Config} \*/
 module.exports = {
   mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/*.{js,ts,jsx,tsx}'],
+  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      sans: ['var(--font-switzer)', ...fontFamily.sans],
+      display: ['var(--font-clash)'],
+    },
     screens: {
       sm: '576px',
-      md: '816px',
+      md: '821px',
       lg: '1079px',
       xl: '1599px',
-    },
-    fontFamily: {
-      sans: ['Inter', 'sans-serif'],
-      display: ['Bebas Neue', 'Helvetica Neue', 'sans-serif'],
     },
     colors: {
       white: '#F5F0F0',
@@ -23,6 +26,7 @@ module.exports = {
       'dark-tint': '#07362C',
       accent: '#974002',
       grey: '#AFB6B5',
+      'dark-grey': '#616B69',
     },
     spacing: {
       0: '0px',
@@ -52,11 +56,15 @@ module.exports = {
       30: '240px',
       35: '280px',
       40: '320px',
+      50: '400px',
+      60: '480px',
+      70: '560px',
     },
     borderWidth: {
       DEFAULT: '1px',
       0: '0',
       2: '2px',
+      4: '3px',
     },
     fontSize: {
       'label-8': ['8px', '8px'],
@@ -70,11 +78,13 @@ module.exports = {
       'label-32': ['32px', '32px'],
       'label-40': ['40px', '40px'],
       'label-48': ['48px', '48px'],
+      'label-56': ['56px', '56px'],
       'body-12': ['12px', '16.8px'],
       'body-14': ['14px', '19.6px'],
       'body-16': ['16px', '22.4px'],
       'body-20': ['20px', '28px'],
       'body-24': ['24px', '33.6px'],
+      'body-48': ['48px', '67.2px'],
     },
     container: {
       center: true,

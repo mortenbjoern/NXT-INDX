@@ -9,26 +9,28 @@ import Footer from '../components/footer';
 import Header from '../components/header';
 import Layout from '../components/layout';
 import Spacer from '../components/spacer';
+import { Splash } from '../components/splash';
 import Head from 'next/head';
 import Headline from '../components/headline';
-import { summary } from '../lib/summary';
+import PageTitle from '../components/pageTitle';
+import { summary, excerpt } from '../lib/copy';
 
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
 export default function Home({ posts, toggle, visible }) {
   return (
     <>
-      <Layout visible={visible}>
+      <Layout>
         <Head>
-          <title>NXT INDX — Find work that matter</title>
+          <title>NXT INDX — Find work that matters.</title>
         </Head>
-        <Header toggle={toggle} />
-        <Spacer height={'h-15'} />
-        <Headline>{summary}</Headline>
-        <Spacer height={'h-10'} />
-        <Feed posts={posts} />
-        <Spacer height={'h-25'} />
-        <Footer toggle={toggle} />
+        <Header />
+        <Spacer height="h-15" />
+        <Splash />
+        <Spacer height="h-10" />
+        <AlternateFeed2 posts={posts} />
+        <Spacer height="h-25" />
+        <Footer />
       </Layout>
     </>
   );

@@ -19,7 +19,7 @@ const Position = (props) => (
         <p className="text-label-16 mt-0.75">
           {props.Company.rich_text[0]?.plain_text}
         </p>
-        <div className="flex text-dark flex-wrap gap-x-3 gap-y-2 text-label-12 font-light mt-4 items-center">
+        <div className="flex text-dark flex-wrap gap-x-3 gap-y-1 text-label-12 font-light mt-4 items-center">
           {props.Company_Location.rich_text[0]?.plain_text && (
             <Pill>
               <MapPin size={12} />

@@ -5,19 +5,9 @@ class MyDocument extends Document {
     return (
       <Html
         lang="en"
-        className="bg-light [-webkit-tap-highlight-color:transparent]"
+        className="bg-light font-sans [-webkit-tap-highlight-color:transparent]"
       >
         <Head>
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-            crossOrigin="true"
-          />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700;900&display=swap"
-            rel="stylesheet"
-          />
           <link
             rel="apple-touch-icon"
             sizes="180x180"

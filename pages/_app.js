@@ -1,14 +1,21 @@
 import '../styles/globals.css';
-import OverlayContainer from '../components/overlayContainer';
-import useOverlay from '../components/useOverlay';
+import localFont from '@next/font/local';
+const switzer = localFont({
+  src: '/Switzer-Variable.woff2',
+  variable: '--font-switzer',
+  weight: '300 700',
+});
+const clashDisplay = localFont({
+  src: '/ClashDisplay-Variable.woff2',
+  weight: '300 900',
+  variable: '--font-clash',
+});
 
 function MyApp({ Component, pageProps }) {
-  const { visible, toggle } = useOverlay();
   return (
-    <>
-      <Component toggle={toggle} visible={visible} {...pageProps} />
-      <OverlayContainer toggle={toggle} visible={visible} />
-    </>
+    <main className={`${switzer.variable} ${clashDisplay.variable} font-sans`}>
+      <Component {...pageProps} />
+    </main>
   );
 }
 

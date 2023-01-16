@@ -15,7 +15,7 @@ export default function About({ toggle, visible }) {
           <title>About — NXT INDX</title>
         </Head>
         <Header toggle={toggle} />
-        <Spacer height={'h-15'} />
+        <Spacer height="h-20 md:h-25" />
         <section className="flex w-full flex-col-reverse md:flex-row md:justify-center items-start md:items-center h-auto">
           <div className="w-full md:w-3/5">
             <Headline>
@@ -36,7 +36,7 @@ export default function About({ toggle, visible }) {
             <Star height="176" width="169" />
           </div>
         </section>
-        <Spacer height={'h-12.5'} />
+        <Spacer height="h-20 md:h-25" />
         <section className="flex w-full flex-col-reverse md:flex-row md:justify-center items-start md:items-center h-auto">
           <div className="w-full md:w-3/5">
             <Headline>
@@ -67,7 +67,7 @@ export default function About({ toggle, visible }) {
             <Scale height="164" width="164" />
           </div>
         </section>
-        <Spacer height={'h-12.5'} />
+        <Spacer height="h-20 md:h-25" />
         <section className="flex w-full flex-col-reverse md:flex-row md:justify-center items-start md:items-center h-auto">
           <div className="w-full md:w-3/5">
             <Headline>

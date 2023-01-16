@@ -32,7 +32,7 @@ export default function DataPolicy({ toggle, visible }) {
                 y="0.5"
                 width="31"
                 height="31"
-                rx="3.5"
+                rx="0"
                 stroke="#062B23"
               />
               <path
@@ -53,8 +53,12 @@ export default function DataPolicy({ toggle, visible }) {
               </a>{' '}
               for web analytics. It is a non-invasive, privacy-first and carbon
               conscious product that is compliant with all privacy laws out of
-              the box. That means no annoying banners and no way anyone can
-              identify you personally based on your activity on this site.
+              the box.
+            </Paragraph>
+            <Spacer height="h-1" />
+            <Paragraph>
+              That means no annoying banners and no way anyone can identify you
+              personally based on your activity on this site.
             </Paragraph>
           </div>
         </section>
@@ -73,7 +77,7 @@ export default function DataPolicy({ toggle, visible }) {
                 y="0.5"
                 width="31"
                 height="31"
-                rx="3.5"
+                rx="0"
                 stroke="#062B23"
               />
               <path
@@ -99,7 +103,10 @@ export default function DataPolicy({ toggle, visible }) {
               . When you submit a position through the form on this site, you
               create a new entry in the Notion database with the information you
               provided through the form. Nothing personally identifiable about
-              yourself is automatically recorded through the submission process.
+              yourself is automatically recorded through the submission process.{' '}
+            </Paragraph>
+            <Spacer height="h-1" />
+            <Paragraph>
               We highly recommend you never submit anything personally
               identifiable and only provide already publically available
               information about a specific open position. You can always ask us
