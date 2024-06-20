@@ -85,6 +85,7 @@ module.exports = {
       'body-16': ['16px', '22.4px'],
       'body-20': ['20px', '28px'],
       'body-24': ['24px', '33.6px'],
+      'body-28': ['24px', '39.2px'],
       'body-48': ['48px', '67.2px'],
     },
     container: {

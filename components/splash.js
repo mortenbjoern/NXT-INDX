@@ -9,7 +9,7 @@ export const Splash = () => {
         {excerpt}
       </h1>
       <h2
-        className={`mt-2 text-body-18 md:text-body-24 md:w-70 m-auto font-normal`}
+        className={`mt-2 text-body-16 md:text-body-20 md:w-60 m-auto font-normal`}
       >
         {summary}
       </h2>

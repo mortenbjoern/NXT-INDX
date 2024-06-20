@@ -3,10 +3,10 @@ import Link from 'next/link';
 import Carbon from './carbon';
 import { LogoOnly } from './logo';
 
-export default function Footer({ toggle }) {
+export default function Footer() {
   return (
     <footer className="flex flex-col md:flex-row md:flex-wrap md:w-full md:justify-between items-start">
-      <div className="w-2/3 md:w-50 space-y-2 md:space-y-3">
+      <div className="w-2/3 md:w-40 space-y-2 md:space-y-3">
         <LogoOnly />
         <p className="text-body-14 md:text-body-16">{summary}</p>
       </div>
